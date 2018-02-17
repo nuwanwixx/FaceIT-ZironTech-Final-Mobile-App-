@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FaceIT2.MarkupExtensions" 
+             x:Class="FaceIT2.MainPage"
+             NavigationPage.HasBackButton="False"
+             Title="Welcome">
+
+    <StackLayout>
+        <Image x:Name="image1" Aspect="AspectFill" />
+    
+    <StackLayout  Padding="5,10,5,5" >
+        
+        <Label Text="Face IT"
+               FontSize="30" 
+               TextColor="Navy" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand"/>
+        <Label Text="Developed by ZirconTech" 
+               FontSize="15" TextColor="Gray" 
+               VerticalOptions="CenterAndExpand"  
+               HorizontalOptions="CenterAndExpand"/>
+
+        <StackLayout VerticalOptions="FillAndExpand" >
+            <Button Text="Sign IN" Clicked="Button_SignIn" />
+          
+            <Button Text="Sign UP" Clicked="Button_SignUp" />
+        </StackLayout>
+    </StackLayout>
+    </StackLayout>
+</ContentPage>

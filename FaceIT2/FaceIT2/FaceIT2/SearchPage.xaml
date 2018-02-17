@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceIT2.SearchPage"
+             Title="Search">
+
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Text="SignOut" Activated="ToolBar_Btn3" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+        <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Let's Search..."/>
+            <Button Text="Face Search" Clicked="FaceSearch_Btn"/>
+            <Button Text="Location Search" Clicked="LocationSearch_Btn" />
+            <Button Text="Name Search" Clicked="NameSearch_Btn" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

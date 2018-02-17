@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceIT2.SignUpPage"
+             BackgroundColor="Azure"
+             Title="Sign Up">
+    <ScrollView>
+        <StackLayout Padding="5,20,5,0">
+            <StackLayout>
+                <Button Text="Update Location" Clicked="Button_SetLocation"/>
+                <Label x:Name="txtAddress" Text="Loaction"/>
+            </StackLayout>
+            
+            <Button Text="UploadPhoto" Clicked="Button_UploadPhoto"/>
+
+            <Button Text="Gallery" Clicked="Button_Galary" />
+
+            <Image x:Name="MainImage"
+                 WidthRequest="400"
+                 HeightRequest="220"/>
+            
+            <Label x:Name="PathLabel" />
+
+            <Label x:Name="photoLabel"/>
+
+            <Button Text="Next" Clicked="Button_Next" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

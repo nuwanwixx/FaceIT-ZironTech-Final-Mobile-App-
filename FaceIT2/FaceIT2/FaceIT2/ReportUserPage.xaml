@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceIT2.ReportUserPage"
+             xmlns:viewModel="clr-namespace:FaceIT2.Models"
+             Title="Report User">
+    <ContentPage.BindingContext>
+        <viewModel:ReportUserBindingModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="5,10,5,0">
+            <Label Text="Submit Report with a description"/>
+
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Entry x:Name="Report" Text="{Binding ReportDetail}"  Placeholder="Description" />
+                <Label x:Name="ErrorLabel"/>
+
+                <Button  Text="Submit" Clicked="Button_Submit" />
+                
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

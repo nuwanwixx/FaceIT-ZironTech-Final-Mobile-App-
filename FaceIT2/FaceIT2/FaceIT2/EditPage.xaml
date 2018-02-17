@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceIT2.EditPage">
+    
+    <StackLayout Padding="5,20,5,0">
+
+        <Label Text="Let's Create New Account"/>
+        <ScrollView>
+            <StackLayout Padding="5, 20,5,0">
+                <Entry x:Name="NameEntry"  Keyboard="Text" Placeholder="First Name" />
+                <Label x:Name="ErrorLabel3"/>
+
+                <Entry x:Name="LNameEntry" Keyboard="Text" Placeholder="Last Name" />
+                <Label x:Name="ErrorLabel9"/>
+
+                <Entry x:Name="AddressEntry"  Placeholder="Address"  />
+                <Label x:Name="ErrorLabel8" />
+
+                <Entry x:Name="ContactNumber"  Placeholder="Contact Number" />
+                <Label x:Name="ErrorLabel5" />
+
+                <Entry x:Name="GenderEntry"   Placeholder="Gender" />
+                <Label x:Name="ErrorLabel6" />
+
+                <Entry x:Name="DescriptionEntry"  Placeholder= "Description" />
+                <Label x:Name="ErrorLabel7"/>
+
+                <StackLayout>
+                    <Button Text="Update Location" Clicked="Button_UpdateLocation"/>
+                    <Label x:Name="txtAddress" Text="Loaction"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+        <StackLayout >
+            <Button  Text="Submit" Clicked="Button_Submit" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

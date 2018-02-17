@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="Profile"
+             x:Class="FaceIT2.ProfilePage"
+             xmlns:viewModels="clr-namespace:FaceIT2.ViewModels"
+             NavigationPage.HasBackButton="False"
+             Title="Home">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Notifiction" Activated="ToolBar_Btn1" Order="Secondary"/>
+        <ToolbarItem Text="Search" Activated="ToolBar_Btn2" Order="Secondary"/>
+        <ToolbarItem Text="Edit Details" Activated="ToolBar_Btn3" Order="Secondary"/>
+        <ToolbarItem Text="SignOut" Activated="ToolBar_Btn4" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <Image x:Name="profile" WidthRequest="360"
+                 HeightRequest="220"/>
+            <StackLayout>
+                <Label  x:Name="firstNameLabel" FontSize="25" HorizontalOptions="CenterAndExpand" />
+                <StackLayout Padding="10,0,5,0">
+                    <StackLayout>
+                        <Label Text="Profile Type" FontSize="18" FontAttributes="Bold"/>
+                        <Label Text="User Profile" FontSize="15" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Last Name" FontSize="18" FontAttributes="Bold"/>
+                        <Label  x:Name="lastNameLabel" FontSize="15" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Description" FontSize="18" FontAttributes="Bold"/>
+                        <Label  x:Name="descriptionLabel" FontSize="15" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Email" FontSize="18" FontAttributes="Bold"/>
+                        <Label  x:Name="emailLabel" FontSize="15" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Gender" FontSize="18" FontAttributes="Bold"/>
+                        <Label  x:Name="genderLabel" FontSize="15"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Contact Number" FontSize="18" FontAttributes="Bold" />
+                        <Label  x:Name="mobileNumberLabel" FontSize="15"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Address" FontSize="18" FontAttributes="Bold"/>
+                        <Label  x:Name="addressLabel" FontSize="15"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

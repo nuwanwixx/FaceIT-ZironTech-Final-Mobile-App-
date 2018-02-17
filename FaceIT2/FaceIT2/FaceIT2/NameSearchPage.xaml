@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:FaceIT2.ViewModels;assembly=FaceIT2"
+             x:Class="FaceIT2.NameSearchPage"
+             Title="Search By Name">
+    <ContentPage.BindingContext>
+        <viewModels:ProfileViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search name" x:Name="Search" SearchButtonPressed="Search_Btn" />
+            
+            <StackLayout>
+                <ListView x:Name="SearchList" ItemSelected="SearchList_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding FirstName}" Detail="{Binding LastName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

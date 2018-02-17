@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceIT2.SignInPage"
+             BackgroundColor="Azure"
+             Title="Sign In"
+             xmlns:viewModels="clr-namespace:FaceIT2.ViewModels">
+
+    <StackLayout Padding="5,10,5,0">
+            <Label Text="Let's Go!!!" TextColor="Blue" FontSize="20"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+          
+            <StackLayout VerticalOptions="FillAndExpand">
+            <Entry x:Name="EmailEntry"   Placeholder="Email" />
+            <Label x:Name="ErrorLabel"/>
+            <Entry x:Name="PasswordEntry"  IsPassword="True" Placeholder="Password" />
+            <Label x:Name="ErrorLabel2"/>
+            <Button  Text="Login" Clicked="Button_Login" />
+
+            <Button Text="Forget Password" Clicked="Button_ForgetPassword" />
+
+        </StackLayout>
+        
+        </StackLayout>
+   
+</ContentPage>
+

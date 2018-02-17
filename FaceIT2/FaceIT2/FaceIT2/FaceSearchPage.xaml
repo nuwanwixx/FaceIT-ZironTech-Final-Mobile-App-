@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceIT2.FaceSearchPage"
+             xmlns:viewModels="clr-namespace:FaceIT2.ViewModels;assembly=FaceIT2"
+             BackgroundColor="Azure"
+             Title="Face Search">
+    <ContentPage.BindingContext>
+        <viewModels:ProfileViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout Padding="5,20,5,0">
+            <Button Text="UploadPhoto" Clicked="Button_UploadPhoto"/>
+
+            <Button Text="Galary" Clicked="Button_Galary" />
+
+            <Image x:Name="MainImage"
+                 WidthRequest="400"
+                 HeightRequest="220"/>
+
+            <Label x:Name="PathLabel" />
+
+            <StackLayout>
+                <ListView x:Name="SearchList" ItemSelected="SearchList_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding FirstName}" Detail="{Binding LastName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <StackLayout>
+                    <ListView x:Name=" CelebSearchList" ItemSelected="CelebSearchList_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding FirstName}" Detail="{Binding LastName}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+            </StackLayout>
+
+            
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

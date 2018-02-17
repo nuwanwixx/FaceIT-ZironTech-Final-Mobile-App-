@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="FaceIT2.MasterPage"
+                  x:local="cls-namespace:FaceIT2">
+    <MasterDetailPage.Master>
+        <ContentPage.Content>
+            <StackLayout>
+                <Button Text="Notifcations" BackgroundColor="Transparent" Clicked="Notofication_Btn"/>
+                <Button Text="Edit Profile" BackgroundColor="Transparent" Clicked="EditProfile_Btn"/>
+                <Button Text="Settings" BackgroundColor="Transparent" Clicked="Settings_Btn"/>
+                <Button Text="SignOut" BackgroundColor="Transparent" Clicked="SignOut_Btn"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <local:ProfilePage x:Name="Profile" />
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
